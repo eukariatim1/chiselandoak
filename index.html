@@ -38,18 +38,20 @@
             font-family: 'Playfair Display', serif;
         }
 
-        /* Navigation */
+        /* Navigation - Centered Logo Layout */
         nav {
             background-color: var(--brand-dark);
             padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
             align-items: center;
             border-bottom: 3px solid var(--brand-gold);
             position: relative;
         }
 
         .nav-logo {
+            grid-column: 2;
+            justify-self: center;
             color: var(--brand-gold);
             font-size: 1.5rem;
             font-weight: 700;
@@ -58,6 +60,8 @@
         }
 
         .nav-right {
+            grid-column: 3;
+            justify-self: end;
             display: flex;
             align-items: center;
             gap: 1.5rem;
@@ -69,6 +73,7 @@
             margin-left: 1.5rem;
             font-size: 0.9rem;
             transition: color 0.3s;
+            text-transform: none;
         }
 
         .nav-contact a:hover { color: var(--brand-gold); }
@@ -382,7 +387,7 @@
             color: white;
             text-decoration: none;
             transition: color 0.3s ease;
-            text-transform: none; /* Prevents text transformation issues */
+            text-transform: none;
         }
 
         .contact-item a:hover {
@@ -419,7 +424,7 @@
         <div class="nav-right">
             <div class="nav-contact">
                 <a href="tel:0894171335">089 417 1335</a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chiselandoak@gmail.com" target="_blank" style="text-transform: none;">chiselandoak@gmail.com</a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chiselandoak@gmail.com" target="_blank">chiselandoak@gmail.com</a>
             </div>
 
             <!-- Three-line Hamburger Button -->
@@ -531,9 +536,9 @@
             </div>
             <div class="contact-item">
                 <h5>Contact</h5>
-                <p>089 417 1335<br><a href="https://mail.google.com/mail/?view=cm&fs=1&to=chiselandoak@gmail.com" target="_blank" style="text-transform: none;">chiselandoak@gmail.com</a></p>
+                <p>089 417 1335<br><a href="https://mail.google.com/mail/?view=cm&fs=1&to=chiselandoak@gmail.com" target="_blank">chiselandoak@gmail.com</a></p>
             </div>
-            <div class="contact-item">
+            <div class="nav-contact contact-item" style="display: block;">
                 <h5>Social</h5>
                 <p><a href="https://facebook.com/chiselandoak" target="_blank">Facebook Page<br>facebook.com/chiselandoak</a></p>
             </div>
