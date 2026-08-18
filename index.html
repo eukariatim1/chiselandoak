@@ -46,6 +46,7 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 3px solid var(--brand-gold);
+            position: relative;
         }
 
         .nav-logo {
@@ -54,6 +55,12 @@
             font-weight: 700;
             text-decoration: none;
             letter-spacing: 1px;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
         }
 
         .nav-contact a {
@@ -65,6 +72,60 @@
         }
 
         .nav-contact a:hover { color: var(--brand-gold); }
+
+        /* Hamburger Menu Styles */
+        .menu-toggle {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 22px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: var(--brand-gold);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        /* Dropdown Navigation Menu */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            right: 2rem;
+            background-color: var(--brand-dark);
+            border: 1px solid var(--brand-gold);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            width: 220px;
+            display: none;
+            flex-direction: column;
+            padding: 1rem 0;
+            z-index: 99;
+        }
+
+        .dropdown-menu.active {
+            display: flex;
+        }
+
+        .dropdown-menu a {
+            color: white;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.95rem;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: rgba(179, 139, 89, 0.15);
+            color: var(--brand-gold);
+        }
 
         /* Hero Section */
         .hero { 
@@ -353,9 +414,26 @@
 
     <nav>
         <a href="#" class="nav-logo serif">Chisel & Oak</a>
-        <div class="nav-contact">
-            <a href="tel:0894171335">089 417 1335</a>
-            <a href="mailto:chislandoak@gmail.com">chislandoak@gmail.com</a>
+        
+        <div class="nav-right">
+            <div class="nav-contact">
+                <a href="tel:0894171335">089 417 1335</a>
+                <a href="mailto:chislandoak@gmail.com">chislandoak@gmail.com</a>
+            </div>
+
+            <!-- Three-line Hamburger Button -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Dropdown Menu Links -->
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="#gallery">Collection</a>
+                <a href="https://facebook.com/chiselandoak" target="_blank">Facebook Page</a>
+                <a href="mailto:chislandoak@gmail.com">Contact Us</a>
+            </div>
         </div>
     </nav>
 
@@ -455,7 +533,7 @@
             </div>
             <div class="contact-item">
                 <h5>Social</h5>
-                <p><a href="https://www.facebook.com/profile.php?id=61560591244585" target="_blank">Follow us on Facebook<br>@Chisel and Oak</a></p>
+                <p><a href="https://facebook.com/chiselandoak" target="_blank">Follow us on Facebook<br>@Chisel and Oak</a></p>
             </div>
         </div>
     </section>
@@ -464,5 +542,22 @@
         <p>&copy; 2026 Chisel and Oak. All rights reserved.</p>
     </footer>
 
+    <!-- JavaScript to make the 3-line menu clickable -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        menuToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdownMenu.classList.toggle('active');
+        });
+
+        // Close the menu when clicking anywhere else on the page
+        window.addEventListener('click', () => {
+            if (dropdownMenu.classList.contains('active')) {
+                dropdownMenu.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
