@@ -299,7 +299,7 @@
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            gap: 2.5rem;
             max-width: 900px;
             margin: 3rem auto 0;
             border-top: 1px solid rgba(255,255,255,0.1);
@@ -316,6 +316,16 @@
         }
 
         .contact-item p { font-size: 1.1rem; font-family: 'Playfair Display', serif; }
+
+        .contact-item a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--brand-gold);
+        }
 
         footer {
             background: #110d0a;
@@ -445,7 +455,7 @@
             </div>
             <div class="contact-item">
                 <h5>Social</h5>
-                <p>Follow us on Facebook<br>@Chisel and Oak</p>
+                <p><a href="https://www.facebook.com/profile.php?id=61560591244585" target="_blank">Follow us on Facebook<br>@Chisel and Oak</a></p>
             </div>
         </div>
     </section>
