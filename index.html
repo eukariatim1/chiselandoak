@@ -38,45 +38,50 @@
             font-family: 'Playfair Display', serif;
         }
 
-        /* Navigation - Centered Logo Layout */
+        /* Navigation - True Centered Logo Layout */
         nav {
             background-color: var(--brand-dark);
             padding: 1rem 2rem;
-            display: grid;
-            grid-template-columns: 1fr auto 1fr;
+            display: flex;
+            justify-content: space-between;
             align-items: center;
             border-bottom: 3px solid var(--brand-gold);
             position: relative;
         }
 
         .nav-logo {
-            grid-column: 2;
-            justify-self: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
             color: var(--brand-gold);
             font-size: 1.5rem;
             font-weight: 700;
             text-decoration: none;
             letter-spacing: 1px;
+            white-space: nowrap;
         }
 
-        .nav-right {
-            grid-column: 3;
-            justify-self: end;
+        .nav-contact {
             display: flex;
             align-items: center;
-            gap: 1.5rem;
         }
 
         .nav-contact a {
             color: white;
             text-decoration: none;
-            margin-left: 1.5rem;
+            margin-right: 1.5rem;
             font-size: 0.9rem;
             transition: color 0.3s;
             text-transform: none;
         }
 
         .nav-contact a:hover { color: var(--brand-gold); }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
 
         /* Hamburger Menu Styles */
         .menu-toggle {
@@ -412,21 +417,21 @@
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
             .mission-text { font-size: 1.4rem; }
-            .nav-contact a { display: none; }
+            .nav-contact { display: none; }
         }
     </style>
 </head>
 <body>
 
     <nav>
+        <div class="nav-contact">
+            <a href="tel:0894171335">089 417 1335</a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chiselandoak@gmail.com" target="_blank">chiselandoak@gmail.com</a>
+        </div>
+
         <a href="#" class="nav-logo serif">Chisel & Oak</a>
         
         <div class="nav-right">
-            <div class="nav-contact">
-                <a href="tel:0894171335">089 417 1335</a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chiselandoak@gmail.com" target="_blank">chiselandoak@gmail.com</a>
-            </div>
-
             <!-- Three-line Hamburger Button -->
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu">
                 <span></span>
@@ -538,7 +543,7 @@
                 <h5>Contact</h5>
                 <p>089 417 1335<br><a href="https://mail.google.com/mail/?view=cm&fs=1&to=chiselandoak@gmail.com" target="_blank">chiselandoak@gmail.com</a></p>
             </div>
-            <div class="nav-contact contact-item" style="display: block;">
+            <div class="contact-item">
                 <h5>Social</h5>
                 <p><a href="https://facebook.com/chiselandoak" target="_blank">Facebook Page<br>facebook.com/chiselandoak</a></p>
             </div>
