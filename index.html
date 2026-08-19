@@ -38,32 +38,21 @@
             font-family: 'Playfair Display', serif;
         }
 
-        /* Navigation - True Centered Logo Layout */
+        /* Navigation - Bulletproof Centering Layout */
         nav {
             background-color: var(--brand-dark);
             padding: 1rem 2rem;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
             border-bottom: 3px solid var(--brand-gold);
             position: relative;
-        }
-
-        .nav-logo {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            color: var(--brand-gold);
-            font-size: 1.5rem;
-            font-weight: 700;
-            text-decoration: none;
-            letter-spacing: 1px;
-            white-space: nowrap;
         }
 
         .nav-contact {
             display: flex;
             align-items: center;
+            flex: 1;
         }
 
         .nav-contact a {
@@ -77,10 +66,26 @@
 
         .nav-contact a:hover { color: var(--brand-gold); }
 
+        .nav-logo-container {
+            flex: 1;
+            text-align: center;
+        }
+
+        .nav-logo {
+            color: var(--brand-gold);
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
         .nav-right {
+            flex: 1;
             display: flex;
+            justify-content: flex-end;
             align-items: center;
-            margin-left: auto;
+            position: relative;
         }
 
         /* Hamburger Menu Styles */
@@ -108,8 +113,8 @@
         /* Dropdown Navigation Menu */
         .dropdown-menu {
             position: absolute;
-            top: 100%;
-            right: 2rem;
+            top: calc(100% + 1rem);
+            right: 0;
             background-color: var(--brand-dark);
             border: 1px solid var(--brand-gold);
             box-shadow: 0 10px 25px rgba(0,0,0,0.5);
@@ -490,7 +495,9 @@
             <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chiselandoak@gmail.com" target="_blank">chiselandoak@gmail.com</a>
         </div>
 
-        <a href="#" class="nav-logo serif">Chisel & Oak</a>
+        <div class="nav-logo-container">
+            <a href="#" class="nav-logo serif">Chisel & Oak</a>
+        </div>
         
         <div class="nav-right">
             <!-- Three-line Hamburger Button -->
