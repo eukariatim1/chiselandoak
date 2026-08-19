@@ -359,74 +359,69 @@
 
         .item-details p { font-size: 0.95rem; color: var(--text-muted); }
 
-        /* Reviews Section */
+        /* Reviews / Feedback Section */
         .reviews-section {
-            background: #fff;
+            background: white;
             padding: 5rem 2rem;
-            text-align: center;
-        }
-
-        .reviews-subtitle {
-            font-size: 1.1rem;
-            color: var(--brand-wood);
-            margin-bottom: 3rem;
-            font-weight: 500;
         }
 
         .reviews-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             max-width: 1100px;
-            margin: 0 auto 2.5rem;
-            text-align: left;
+            margin: 0 auto;
         }
 
         .review-card {
             background: var(--brand-light);
-            padding: 2rem;
             border: 1px solid #eaeaea;
-            border-left: 4px solid var(--brand-gold);
+            padding: 2rem;
+            border-radius: 4px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
-        .review-card p {
-            font-size: 0.95rem;
-            color: var(--text-main);
-            font-style: italic;
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
             margin-bottom: 1rem;
         }
 
         .review-author {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 500;
-        }
-
-        .reviews-link-container {
-            margin-top: 2rem;
-        }
-
-        .btn-secondary {
-            background-color: transparent;
+            font-weight: 600;
             color: var(--brand-dark);
-            border: 2px solid var(--brand-gold);
-            padding: 0.8rem 2rem;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: 2px;
-            transition: all 0.3s ease;
-            display: inline-block;
+            font-size: 1.1rem;
         }
 
-        .btn-secondary:hover {
-            background-color: var(--brand-gold);
+        .review-meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 0.2rem;
+        }
+
+        .review-badge {
+            background: var(--brand-gold);
             color: white;
+            font-size: 0.7rem;
+            padding: 3px 8px;
+            border-radius: 2px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .review-badge.negative {
+            background: #a94442;
+        }
+
+        .review-text {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            font-style: italic;
+            margin-bottom: 1.5rem;
         }
 
         /* Contact Section */
@@ -512,7 +507,7 @@
             <!-- Dropdown Menu Links -->
             <div class="dropdown-menu" id="dropdownMenu">
                 <a href="#gallery">Collection</a>
-                <a href="#reviews">Reviews</a>
+                <a href="#reviews">Customer Feedback</a>
                 <a href="https://facebook.com/chiselandoak" target="_blank">Facebook Page</a>
                 <a href="https://www.instagram.com/chiselandoak/" target="_blank">Instagram Page</a>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chiselandoak@gmail.com" target="_blank">Contact Us</a>
@@ -601,40 +596,128 @@
 
     </main>
 
-    <!-- Reviews Section -->
+    <!-- Customer Feedback / Reviews Section -->
     <section id="reviews" class="reviews-section">
-        <h2 class="section-title">Customer Reviews</h2>
-        <p class="reviews-subtitle">Backed by a 92% satisfaction rating from our valued customers</p>
-        
+        <h2 class="section-title">Customer Feedback</h2>
         <div class="reviews-grid">
+            
             <div class="review-card">
-                <p>"Friendly staff, great selection and very reasonably priced."</p>
-                <div class="review-author">— Anonymous Customer</div>
+                <div>
+                    <div class="review-header">
+                        <div>
+                            <div class="review-author">Darren Finnegan</div>
+                            <div class="review-meta">December 16, 2022 &bull; Shopper: Male</div>
+                        </div>
+                        <span class="review-badge negative">Does Not Recommend</span>
+                    </div>
+                    <p class="review-text">"A friend of mines aunt bought an item off these scammers 3 weeks ago... still hasn't received it... shame on them SCAMMERS"</p>
+                </div>
             </div>
-            <div class="review-card">
-                <p>"Fantastic shop would highly recommend popping in for a visit!! Derek was really nice & helpful .... support local"</p>
-                <div class="review-author">— Anonymous Customer</div>
-            </div>
-            <div class="review-card">
-                <p>"Popped in on the off chance and ending up leaving with some fabulous pieces. beautiful furniture and fantastic helpful staff with plenty of knowledge definitely worth a browse."</p>
-                <div class="review-author">— Anonymous Customer</div>
-            </div>
-            <div class="review-card">
-                <p>"Friendly staff. Excellent selection of products. Vintage furniture lighting bespoke furniture hugh selection of couches. Fast effecient free delivery. Thanks Chisel and Oak. We will be back again."</p>
-                <div class="review-author">— Anonymous Customer</div>
-            </div>
-            <div class="review-card">
-                <p>"what a beautiful shop,was just out walking my dog and came across this beautiful furniture store,exactly what I was looking for top quality furniture at great price,derrick was very helpful and delivery was free,definitely be back to chiseland oak O curry street limerick,a Gem of a shop"</p>
-                <div class="review-author">— Anonymous Customer</div>
-            </div>
-            <div class="review-card">
-                <p>"Glad I dropped in to this place!! Was looking for a 'lazyboy chair' and just on the off chance popped in to this store. Found Derek especially helpful and courteous and I left there with the chair I wanted and at a bargain price!! Very happy with the service and prompt delivery - would definitely recommend Chisel & Oak and would absolutely shop there again."</p>
-                <div class="review-author">— Anonymous Customer</div>
-            </div>
-        </div>
 
-        <div class="reviews-link-container">
-            <a href="https://facebook.com/chiselandoak" target="_blank" class="btn-secondary">View More on Facebook</a>
+            <div class="review-card">
+                <div>
+                    <div class="review-header">
+                        <div>
+                            <div class="review-author">Larry Sweeney</div>
+                            <div class="review-meta">December 16, 2019 &bull; Shopper: Male</div>
+                        </div>
+                        <span class="review-badge">Recommends</span>
+                    </div>
+                    <p class="review-text">"Friendly staff, great selection and very reasonably priced."</p>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div>
+                    <div class="review-header">
+                        <div>
+                            <div class="review-author">Jane Campbell</div>
+                            <div class="review-meta">December 15, 2019 &bull; Shopper: Female</div>
+                        </div>
+                        <span class="review-badge">Recommends</span>
+                    </div>
+                    <p class="review-text">"Fantastic shop would highly recommend popping in for a visit!! Derek was really nice & helpful .... support local"</p>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div>
+                    <div class="review-header">
+                        <div>
+                            <div class="review-author">Emer O'Reilly</div>
+                            <div class="review-meta">December 14, 2019 &bull; Shopper: Female</div>
+                        </div>
+                        <span class="review-badge">Recommends</span>
+                    </div>
+                    <p class="review-text">"Popped in on the off chance and ending up leaving with some fabulous pieces. beautiful furniture and fantastic helpful staff..."</p>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div>
+                    <div class="review-header">
+                        <div>
+                            <div class="review-author">Sylvia Johnston</div>
+                            <div class="review-meta">December 13, 2019 &bull; Shopper: Female</div>
+                        </div>
+                        <span class="review-badge">Recommends</span>
+                    </div>
+                    <p class="review-text">"Friendly staff. Excellent selection of products. Vintage furniture lighting bespoke furniture hugh selection of couches..."</p>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div>
+                    <div class="review-header">
+                        <div>
+                            <div class="review-author">Federica Pisano</div>
+                            <div class="review-meta">December 12, 2019 &bull; Shopper: Female</div>
+                        </div>
+                        <span class="review-badge">Recommends</span>
+                    </div>
+                    <p class="review-text">"what a beautiful shop, was just out walking my dog and came across this beautiful furniture store... a Gem of a shop"</p>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div>
+                    <div class="review-header">
+                        <div>
+                            <div class="review-author">Ruán Lyons</div>
+                            <div class="review-meta">December 12, 2019 &bull; Shopper: Male</div>
+                        </div>
+                        <span class="review-badge">Recommends</span>
+                    </div>
+                    <p class="review-text">"Glad I dropped in to this place!! Was looking for a 'lazyboy chair' and just on the off chance popped in to this store..."</p>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div>
+                    <div class="review-header">
+                        <div>
+                            <div class="review-author">Kelly Healy</div>
+                            <div class="review-meta">December 5, 2019 &bull; Shopper: Female</div>
+                        </div>
+                        <span class="review-badge">Recommends</span>
+                    </div>
+                    <p class="review-text">"Felt very welcomed when I walked into this quaint furniture store, was even offered a complimentary coffee..."</p>
+                </div>
+            </div>
+
+            <div class="review-card">
+                <div>
+                    <div class="review-header">
+                        <div>
+                            <div class="review-author">Rachel O Brien</div>
+                            <div class="review-meta">November 30, 2019 &bull; Shopper: Female</div>
+                        </div>
+                        <span class="review-badge">Recommends</span>
+                    </div>
+                    <p class="review-text">"lovely shop! Derick the owner is very helpful and lovely to deal with!"</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
