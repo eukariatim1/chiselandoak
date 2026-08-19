@@ -359,6 +359,76 @@
 
         .item-details p { font-size: 0.95rem; color: var(--text-muted); }
 
+        /* Reviews Section */
+        .reviews-section {
+            background: #fff;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .reviews-subtitle {
+            font-size: 1.1rem;
+            color: var(--brand-wood);
+            margin-bottom: 3rem;
+            font-weight: 500;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto 2.5rem;
+            text-align: left;
+        }
+
+        .review-card {
+            background: var(--brand-light);
+            padding: 2rem;
+            border: 1px solid #eaeaea;
+            border-left: 4px solid var(--brand-gold);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+        }
+
+        .review-card p {
+            font-size: 0.95rem;
+            color: var(--text-main);
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .review-author {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        .reviews-link-container {
+            margin-top: 2rem;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--brand-dark);
+            border: 2px solid var(--brand-gold);
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--brand-gold);
+            color: white;
+        }
+
         /* Contact Section */
         .contact-section {
             background: var(--brand-dark);
@@ -442,6 +512,7 @@
             <!-- Dropdown Menu Links -->
             <div class="dropdown-menu" id="dropdownMenu">
                 <a href="#gallery">Collection</a>
+                <a href="#reviews">Reviews</a>
                 <a href="https://facebook.com/chiselandoak" target="_blank">Facebook Page</a>
                 <a href="https://www.instagram.com/chiselandoak/" target="_blank">Instagram Page</a>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chiselandoak@gmail.com" target="_blank">Contact Us</a>
@@ -529,6 +600,43 @@
         </section>
 
     </main>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews-section">
+        <h2 class="section-title">Customer Reviews</h2>
+        <p class="reviews-subtitle">Backed by a 92% satisfaction rating from our valued customers</p>
+        
+        <div class="reviews-grid">
+            <div class="review-card">
+                <p>"Friendly staff, great selection and very reasonably priced."</p>
+                <div class="review-author">— Anonymous Customer</div>
+            </div>
+            <div class="review-card">
+                <p>"Fantastic shop would highly recommend popping in for a visit!! Derek was really nice & helpful .... support local"</p>
+                <div class="review-author">— Anonymous Customer</div>
+            </div>
+            <div class="review-card">
+                <p>"Popped in on the off chance and ending up leaving with some fabulous pieces. beautiful furniture and fantastic helpful staff with plenty of knowledge definitely worth a browse."</p>
+                <div class="review-author">— Anonymous Customer</div>
+            </div>
+            <div class="review-card">
+                <p>"Friendly staff. Excellent selection of products. Vintage furniture lighting bespoke furniture hugh selection of couches. Fast effecient free delivery. Thanks Chisel and Oak. We will be back again."</p>
+                <div class="review-author">— Anonymous Customer</div>
+            </div>
+            <div class="review-card">
+                <p>"what a beautiful shop,was just out walking my dog and came across this beautiful furniture store,exactly what I was looking for top quality furniture at great price,derrick was very helpful and delivery was free,definitely be back to chiseland oak O curry street limerick,a Gem of a shop"</p>
+                <div class="review-author">— Anonymous Customer</div>
+            </div>
+            <div class="review-card">
+                <p>"Glad I dropped in to this place!! Was looking for a 'lazyboy chair' and just on the off chance popped in to this store. Found Derek especially helpful and courteous and I left there with the chair I wanted and at a bargain price!! Very happy with the service and prompt delivery - would definitely recommend Chisel & Oak and would absolutely shop there again."</p>
+                <div class="review-author">— Anonymous Customer</div>
+            </div>
+        </div>
+
+        <div class="reviews-link-container">
+            <a href="https://facebook.com/chiselandoak" target="_blank" class="btn-secondary">View More on Facebook</a>
+        </div>
+    </section>
 
     <section class="contact-section">
         <h2 class="serif" style="font-size: 2.2rem; margin-bottom: 1rem;">Visit The Workshop</h2>
