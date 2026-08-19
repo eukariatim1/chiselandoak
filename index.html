@@ -370,6 +370,32 @@
             padding: 5rem 2rem;
         }
 
+        .reviews-header-banner {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .reviews-header-banner a {
+            display: inline-block;
+            background: var(--brand-dark);
+            color: var(--brand-gold);
+            border: 2px solid var(--brand-gold);
+            padding: 0.75rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .reviews-header-banner a:hover {
+            background: var(--brand-wood);
+            color: white;
+            transform: translateY(-2px);
+        }
+
         .reviews-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -599,9 +625,14 @@
 
     </main>
 
-    <!-- Customer Feedback / Reviews Section (Positive Only, Named, No Dates, Shopper Gender) -->
+    <!-- Customer Feedback / Reviews Section -->
     <section id="reviews" class="reviews-section">
         <h2 class="section-title">Customer Feedback</h2>
+        
+        <div class="reviews-header-banner">
+            <a href="https://facebook.com/chiselandoak" target="_blank">92% recommend on Facebook (9 Reviews)</a>
+        </div>
+
         <div class="reviews-grid">
 
             <div class="review-card">
